@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --orange: hsl(25, 97%, 53%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --first-weight: 700;
+    --second-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Baloo 2', cursive;
+}
+
+.card{
+    background-color: hsl(213, 19%, 18%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card__body, .card__footer{
+    width: 100%;
+}
+
+.card.congrats{
+    z-index: -1;
+    text-align: center;
+}
+
+.card__header{
+    margin-bottom: 1rem;
+}
+
+.card__header.congrats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo{
+    border-radius: 50%;
+    padding: 13px;
+    background-color: #DCDCDC1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container.rating .first span{
+    display: block;
+}
+.container.rating .first .title{
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.container.congrats .first{
+    margin-bottom: 1.5rem;
+}
+.container.congrats .first .title{
+    background-color: #DCDCDC1a;
+    padding: .1rem 1rem;
+    border-radius: 30px;
+    color: var(--orange);
+}
+
+.container.rating .first .content{
+    font-size: 15px;
+    color: var(--light-grey);
+    font-weight: 400;
+}
+
+.container.rating .second{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    font-family: 'Baloo 2', cursive;
+
+}
+
+.container.congrats .second{
+    margin-bottom: .3rem;
+}
+.container.congrats .second span {
+    color: var(--white);
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.container.congrats .third{
+    margin-bottom: 1.5rem;
+}
+
+.container.congrats .third span{
+    color: var(--light-grey);
+    font-size: 15px;
+}
+
+.bubble{
+    border-radius: 50%;
+    padding: 10px 20px;
+    color: var(--light-grey);
+    background-color: #DCDCDC1a;
+    cursor: pointer;
+    transition: background-color .5s, color .5s;
+}
+
+.bubble:hover{
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.bubble.active{
+    color: var(--white);
+    background-color: var(--light-grey);
+}
+
+.card__footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn{
+    width: 100%;
+    background-color: var(--orange);
+    border: none;
+    outline: none;
+    padding: .8rem 1rem;
+    border-radius: 30px;
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: .2rem;
+    transition: background-color .5s, color .5s;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.btn:hover{
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+@media screen and (min-width: 375px) {
+    .card {
+      width: 350px;
+    }
+    .bubble{
+        border-radius: 50%;
+        padding: 6px 15px;
+    }
+}

@@ -99,6 +99,7 @@ body{
     font-family: 'Baloo 2', cursive;
     width: 100%;
     border: none;
+    padding: 0;
 }
 
 .container.congrats .second{
@@ -169,12 +170,14 @@ input[type="radio"]:checked + label {
     background-color: var(--light-grey);
 }
 
+@media screen and (max-width: 375px) {
+    input[type="radio"] + label {
+        margin: 0 .3rem;
+    }
+}
+
 @media screen and (min-width: 375px) {
     .card {
       width: 350px;
-    }
-    .bubble{
-        border-radius: 50%;
-        padding: 6px 15px;
     }
 }

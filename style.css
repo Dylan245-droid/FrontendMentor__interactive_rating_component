@@ -90,20 +90,21 @@ body{
     font-weight: 400;
 }
 
-.container.rating .second{
+.container.rating .second fieldset{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
     font-family: 'Baloo 2', cursive;
-
+    width: 100%;
+    border: none;
 }
 
 .container.congrats .second{
     margin-bottom: .3rem;
 }
-.container.congrats .second span {
+.container.congrats .second h1{
     color: var(--white);
     font-size: 25px;
     font-weight: 400;
@@ -116,25 +117,6 @@ body{
 .container.congrats .third span{
     color: var(--light-grey);
     font-size: 15px;
-}
-
-.bubble{
-    border-radius: 50%;
-    padding: 10px 20px;
-    color: var(--light-grey);
-    background-color: #DCDCDC1a;
-    cursor: pointer;
-    transition: background-color .5s, color .5s;
-}
-
-.bubble:hover{
-    color: var(--white);
-    background-color: var(--orange);
-}
-
-.bubble.active{
-    color: var(--white);
-    background-color: var(--light-grey);
 }
 
 .card__footer{
@@ -162,6 +144,29 @@ body{
 .btn:hover{
     color: var(--orange);
     background-color: var(--white);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    border-radius: 50%;
+    padding: 10px 20px;
+    color: var(--light-grey);
+    background-color: #DCDCDC1a;
+    cursor: pointer;
+    transition: background-color .5s, color .5s;
+}
+
+input[type="radio"]:hover + label {
+    color: var(--white);
+    background-color: var(--light-grey);
+}
+
+input[type="radio"]:checked + label {
+    color: var(--white);
+    background-color: var(--light-grey);
 }
 
 @media screen and (min-width: 375px) {

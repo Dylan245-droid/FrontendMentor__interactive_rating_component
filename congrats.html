@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component | Congrats</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: white;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+</head>
+<body> 
+
+  <!-- Thank you state start -->
+  
+  <div class="container congrats" role="main">
+    <div class="card congrats">
+        <div class="card__header congrats">
+            <div class="logo_2">
+                <img src="images/illustration-thank-you.svg" alt="">
+            </div>
+        </div>
+
+        <div class="card__body">
+            <div class="card__body__child first">
+                <span class="title">You selected <span class="rating__value"></span> out of 5</span>
+            </div>
+            <div class="card__body__child second">
+                <h1>Thank you!</h1>
+            </div>
+            <div class="card__body__child third">
+              <span>
+                We appreciate you taking the time to give a rating. If you ever need more support, 
+                don’t hesitate to get in touch!
+              </span>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Thank you state end -->
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Dylan245-droid" target="_blank">genese_estivale</a>.
+  </div>
+
+  <script>
+    document.querySelector('.rating__value').innerHTML = window.localStorage.getItem('rating')
+  </script>
+
+</body>
+</html>
